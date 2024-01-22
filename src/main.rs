@@ -191,18 +191,6 @@ fn main() {
 let nullifier_hack = MNT4BigFr::from(0);
 let secret_hack = MNT4BigFr::from(0);
 
-// Computing the public key for the hacked secret
-let pk_hack = base.scalar_mul_le(secret_hack.to_bits_le()?)?.to_affine()?;
-
-// Negating the y-coordinate of the public key
-let pk_hack_negated = AffineRepr {
-    x: pk_hack.x,
-    y: pk_hack.y.negate(),
-};
-
-// Computing the nullifier for the hacked secret
-let nullifier_hack = <LeafH as CRHScheme>::evaluate(&leaf_crh_params, vec![secret_hack]).unwrap();
-
 /* End of solution */
 
 
