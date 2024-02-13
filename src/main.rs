@@ -189,6 +189,7 @@ fn main() {
 /* Enter your solution here */
 
 let nullifier_hack = MNT4BigFr::from(0);
+    
 let secret_hack = MNT4BigFr::from(0);
 
 // Computing the public key for the hacked secret
