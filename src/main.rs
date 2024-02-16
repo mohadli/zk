@@ -202,6 +202,7 @@ let pk_hack_negated = AffineRepr {
 };
 
 // Computing the nullifier for the hacked secret
+    
 let nullifier_hack = <LeafH as CRHScheme>::evaluate(&leaf_crh_params, vec![secret_hack]).unwrap();
 
 /* End of solution */
